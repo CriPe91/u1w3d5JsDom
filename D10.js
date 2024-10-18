@@ -324,10 +324,25 @@ console.log(onlyInLastMillennium(movies));
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+function sumAllTheYears(movies) {
+  let somma = 0;
 
+  for (let i = 0; i < movies.length; i++) {
+    somma += parseInt(movies[i].Year);
+  }
+
+  return somma;
+}
+
+const totalYearsSum = sumAllTheYears(movies);
+console.log(totalYearsSum);
 /* ESERCIZIO 17
-  Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
+  Scrivi una funzione chiamata "" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+function searchByTitle(Title) {
+  return movies.filter((movies) => movies.Title.includes(Title));
+}
+console.log(searchByTitle("Lord"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -343,11 +358,20 @@ console.log(onlyInLastMillennium(movies));
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+const contain = function () {
+  const div = document.getElementById("container");
+  return div;
+};
+console.log(contain());
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
+const tabelle = () => {
+  const tb = document.querySelectorAll("td");
+  return tb;
+};
+console.log(tabelle(tabelle));
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
